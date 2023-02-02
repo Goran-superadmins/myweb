@@ -11,9 +11,9 @@ pipeline{
                 git credentialsId: 'GITHUB_CRED', url: 'https://github.com/Goran-superadmins/cicd-pipeline-train-schedule-gradle.git'
             }
         }
-        stage("Mvn Build"){
+        stage("Maven Build"){
             steps{
-                sh "mvn clean packages"
+                sh "mvn clean package"
             }
         }
     }
